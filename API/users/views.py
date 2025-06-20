@@ -476,7 +476,7 @@ def microsoft_callback(request):
         token_response = app.acquire_token_by_authorization_code(
             code=authorization_code, scopes=SCOPES, redirect_uri=REDIRECT_URI
         )
-        if "access_token" in token_response:
+        if "access_token" in token_response and token_response["access_token"]:
             access_token = token_response["access_token"]
 
             user_data = fetch_user_data(access_token)
