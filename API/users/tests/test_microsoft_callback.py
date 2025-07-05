@@ -1,7 +1,9 @@
 import json
-from unittest.mock import patch, MagicMock
-from django.test import RequestFactory
+from unittest.mock import MagicMock, patch
+
 from django.http import HttpResponseRedirect
+from django.test import RequestFactory
+
 from users.views import microsoft_callback
 
 
